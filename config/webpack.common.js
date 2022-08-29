@@ -1,12 +1,9 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const BundleAnalyzerPlugin =
-  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
-  mode: "development",
   entry: {
-    bundle: path.resolve(__dirname, "src/index.js"),
+    bundle: path.resolve(__dirname, "../src/index.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -45,8 +42,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Happy",
       filename: "index.html",
-      template: "src/index.html",
+      template: "../src/index.html",
     }),
-    new BundleAnalyzerPlugin(),
   ],
 };
