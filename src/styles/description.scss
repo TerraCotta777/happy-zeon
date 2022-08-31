@@ -1,0 +1,102 @@
+.description {
+  overflow: hidden;
+
+  &__inner {
+    @include flex;
+    margin-bottom: calc(156px / var(--size));
+  }
+
+  &__info {
+    margin-top: 24px;
+  }
+
+  &__logo {
+    width: 192px;
+    display: inline-block;
+  }
+
+  &__title {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 44px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &__buttons {
+    margin-top: 20px;
+    margin-left: 2px;
+  }
+
+  .description__button {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 63px;
+    right: 86px;
+    height: 768px;
+    display: none;
+    padding-top: calc(93px / var(--size));
+  }
+}
+
+@media (min-width: 768px) {
+  .description {
+    .description__logo {
+      width: 192px;
+    }
+
+    &__title {
+      font-size: 44px;
+      line-height: 50px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__buttons {
+      margin-left: 5px;
+
+      button:first-child {
+        margin-right: 5px;
+        padding-left: 35px;
+        padding-right: 33px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .description {
+    &__inner {
+      position: relative;
+      padding: 0 64px;
+    }
+
+    &__info {
+      max-width: 394px;
+      margin-top: 131px;
+    }
+
+    &__title {
+      margin-top: 4px;
+      margin-bottom: 18px;
+      font-size: 54px;
+      line-height: 60px;
+    }
+
+    &__img {
+      display: block;
+    }
+  }
+}
