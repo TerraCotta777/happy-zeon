@@ -1,0 +1,143 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  background-color: $light-color;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.15);
+
+  &__inner {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    padding-top: 8px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .header__button {
+		margin-left: 18px;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+
+  .mobile {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $light-color;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in;
+
+    &.active {
+			left: 0;
+      transform: translateX(0);
+    }
+
+    &__close {
+      top: 23px;
+      right: 26px;
+    }
+
+    &__logo {
+      width: 135px;
+      margin-top: 163px;
+      margin-bottom: 49px;
+      padding-right: 15px;
+      display: block;
+    }
+
+    .header__mobile-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 15px;
+      line-height: 24px;
+      color: #666666;
+    }
+
+    .header__link {
+      margin-bottom: 18px;
+      transition: 0.5s ease;
+      transform: translateX(0%);
+      opacity: 0;
+    }
+
+    .header__button {
+      margin-top: 33px;
+      transition: 0.5s ease;
+      transform: translateX(0%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes menuFade {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__hamburger {
+    width: 37px;
+    height: 37px;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e5e5e5;
+    }
+
+    &:focus {
+      border-color: #5ab0ff;
+    }
+  }
+
+  &__desktop-nav {
+    @include flex;
+
+    .header__link {
+      margin-right: 36px;
+      display: inline-block;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        transform: scale(1.08);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header__inner {
+    padding: 17px 9px 18px 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .header__hamburger {
+    display: none;
+  }
+
+  .header nav {
+    @include flex;
+  }
+}

@@ -1,0 +1,39 @@
+.footer {
+  padding: calc(125px / var(--size)) 0;
+  background-color: #f2f2f2;
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo-img {
+    width: 75px;
+    height: 75px;
+  }
+
+  &__logo-text {
+    width: 120px;
+    margin: 13px 0 18px;
+  }
+
+  &__social-icons {
+    @include flex;
+    width: 112px;
+    margin: 0 auto;
+    padding-right: 6px;
+  }
+
+  &__social-icon {
+    height: 24px;
+
+    &:hover svg path {
+      fill: #5ab0ff;
+    }
+  }
+
+  &__social-icon:first-child {
+    height: 20px;
+  }
+}

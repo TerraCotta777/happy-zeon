@@ -1,0 +1,55 @@
+.achievements {
+  background-color: $premium-color;
+  color: $light-color;
+
+  &__inner {
+    padding-top: calc(80px / var(--size));
+    padding-bottom: calc(100px / var(--size));
+    @include flex;
+    flex-direction: column;
+  }
+
+  &__achievement {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  &__number {
+    margin-bottom: 20px;
+    font-size: 96px;
+    line-height: 96px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 768px) {
+  .achievements {
+    &__inner {
+      flex-direction: row;
+    }
+
+		&__achievement {
+			margin-top: 0;
+		}
+  }
+}
+
+@media (min-width: 992px) {
+  .achievements {
+    &__inner {
+      padding-left: 66px;
+      padding-right: 93px;
+    }
+
+    &__achievement:nth-child(2) {
+      position: relative;
+      right: 13px;
+    }
+  }
+}

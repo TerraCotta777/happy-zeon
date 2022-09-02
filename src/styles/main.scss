@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+$primary-color: #222222;
+$light-color: #ffffff;
+$standard-color: #0278ed;
+$premium-color: #ff5437;
+$lifetime-color: #ff9209;
+:root {
+  --size: 4;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@import "header";
+@import "clock";
+@import "description";
+@import "features";
+@import "achievements";
+@import "dark";
+@import "pricing";
+@import "footer";
+@import "modal";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: $primary-color;
+}
+
+body:has(.main) {
+  background-color: aquamarine;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+  margin-top: 77px;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 120px;
+}
+
+.button {
+  padding: 9px 27px 11px;
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: $primary-color;
+  color: $light-color;
+
+  &:hover {
+    background-color: #4e4e4e;
+  }
+
+  &:active {
+    background-color: $primary-color;
+    transform: scale(0.98);
+  }
+
+  &:focus {
+    outline: 2px solid #5ab0ff;
+  }
+}
+
+.title {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.close {
+  position: absolute;
+  width: 24px;
+  border: none;
+  background-color: transparent;
+}
+
+@media (min-width: 576px) {
+  :root {
+    --size: 3;
+  }
+  .container {
+    max-width: 540px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --size: 2;
+  }
+  .main {
+    margin-top: 90px;
+  }
+  .container {
+    max-width: 720px;
+  }
+
+  .button {
+    padding-left: 31px;
+    padding-right: 31px;
+  }
+
+  .title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .subtitle {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --size: 1;
+  }
+  .main {
+    margin-top: 90px;
+  }
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1168px;
+  }
+}

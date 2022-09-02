@@ -1,0 +1,135 @@
+.clock {
+  height: 436px;
+  padding-top: 90px;
+  background: url("../assets/clock-background.png");
+  color: $light-color;
+  text-align: center;
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 1.1px;
+  }
+
+  &__subtitle {
+    margin: 15px 0 57px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 1.5px;
+  }
+
+  &__clock {
+    max-width: 400px;
+    margin: 17px auto 0;
+    padding-left: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      position: relative;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 1.5px;
+
+      span {
+        display: block;
+        font-size: 37px;
+        font-weight: 400;
+        line-height: 60px;
+      }
+    }
+  }
+
+  &__divider {
+    width: 5px;
+    height: 50px;
+    transform: translateY(-6px);
+    background-color: $light-color;
+  }
+}
+
+@media (min-width: 330px) {
+  .clock__clock {
+    li span {
+      font-size: 40px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .clock {
+    padding-top: 75px;
+
+    &__title {
+      font-size: 45px;
+      line-height: 45px;
+    }
+
+    &__subtitle {
+      margin: 15px 0 57px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    &__clock {
+      max-width: 752px;
+
+      li {
+        max-width: 480px;
+        font-size: 18px;
+        line-height: 26px;
+
+        span {
+          font-size: 70px;
+          line-height: 100px;
+        }
+      }
+    }
+
+    &__divider {
+      height: 80px;
+      transform: translateY(-11px);
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .clock {
+    padding-top: 60px;
+
+    &__title {
+      font-size: 50px;
+      line-height: 75px;
+    }
+
+    &__subtitle {
+      margin: 0 0 4px;
+      font-size: 30px;
+      line-height: 45px;
+    }
+
+    &__clock {
+      li {
+        font-size: 24px;
+        line-height: 36px;
+
+        span {
+          font-size: 100px;
+          line-height: 127px;
+        }
+      }
+    }
+
+    &__divider {
+      width: 9px;
+      height: 89px;
+      transform: translateY(-19px);
+    }
+  }
+}
