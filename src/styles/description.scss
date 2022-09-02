@@ -3,7 +3,7 @@
 
   &__inner {
     @include flex;
-    margin-bottom: calc(156px / var(--size));
+    margin-bottom: calc(155px / var(--size));
   }
 
   &__info {
@@ -29,7 +29,7 @@
   }
 
   &__buttons {
-    margin-top: 20px;
+    margin-top: 19px;
     margin-left: 2px;
   }
 
@@ -40,9 +40,9 @@
 
   &__img {
     position: absolute;
-    top: 63px;
-    right: 86px;
-    height: 768px;
+    top: 0;
+    right: 100px;
+    height: 837px;
     display: none;
     padding-top: calc(93px / var(--size));
   }
@@ -68,7 +68,7 @@
       margin-left: 5px;
 
       button:first-child {
-        margin-right: 5px;
+        margin-right: 6px;
         padding-left: 35px;
         padding-right: 33px;
       }
@@ -80,12 +80,12 @@
   .description {
     &__inner {
       position: relative;
-      padding: 0 64px;
+      padding: 5px 64px 0 78px;
     }
 
     &__info {
       max-width: 394px;
-      margin-top: 131px;
+      margin-top: 133px;
     }
 
     &__title {

@@ -4,12 +4,13 @@
   text-align: center;
 
   &__subtitle {
-    margin: 6px 0 11px;
+    margin: 3px 0 15px;
   }
 
   &__text {
     max-width: 568px;
     margin: 0 auto 39px;
+		font-size: 18px;
     line-height: 24px;
   }
 
@@ -70,7 +71,7 @@
 @media (min-width: 768px) {
   .pricing {
     &__plan {
-      padding: 52px 0 50px;
+      padding: 50px 0 50px;
     }
     &__cost {
       margin-top: 0;

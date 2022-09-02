@@ -16,9 +16,9 @@
           <nav>
             <ul class="header__desktop-nav">
               <li>
-                <a href="#" class="header__link">Features</a>
+                <a href="#features" class="header__link">Features</a>
               </li>
-              <li><a href="#" class="header__link">Pricing</a></li>
+              <li><a href="#pricing" class="header__link">Pricing</a></li>
               <li><a href="#" class="header__link">Testimonials</a></li>
               <li><a href="#" class="header__link">FAQ</a></li>
             </ul>
@@ -35,8 +35,8 @@
               <img src="./assets/icons/logo.svg" alt="Happy logo" />
             </a>
             <nav class="header__mobile-nav">
-              <a href="#" class="header__link">Features</a
-              ><a href="#" class="header__link">Pricing</a
+              <a href="#features" class="header__link">Features</a
+              ><a href="#pricing" class="header__link">Pricing</a
               ><a href="#" class="header__link">Testimonials</a
               ><a href="#" class="header__link">FAQ</a>
               <button class="header__button button">Get this app</button>
@@ -50,13 +50,15 @@
         <div class="container">
           <h1 class="clock__title">big sale on lifetime plan</h1>
           <h3 class="clock__subtitle">there is very little left</h3>
-          <div class="clock__clock">
-            <p>14 | 03 | 26 | 59</p>
-            <div>
-              <span>days</span> <span>hours</span> <span>minutes</span>
-              <span>seconds</span>
-            </div>
-          </div>
+          <ul class="clock__clock">
+            <li><span class="clock__days">14</span>days</li>
+            <li class="clock__divider"></li>
+            <li><span class="clock__hours">03</span>hours</li>
+            <li class="clock__divider"></li>
+            <li><span class="clock__minutes">26</span>minutes</li>
+            <li class="clock__divider"></li>
+            <li><span class="clock__seconds">59</span>seconds</li>
+          </ul>
         </div>
       </section>
       <section class="description container">
@@ -71,7 +73,9 @@
               It's available in the App Store right now. Go check it out!
             </p>
             <div class="description__buttons">
-              <button class="description__button button">buy now</button>
+              <button class="description__button button buy-now">
+                buy now
+              </button>
               <button class="description__button button">Read more</button>
             </div>
           </div>
@@ -80,7 +84,7 @@
           </div>
         </div>
       </section>
-      <section class="features">
+      <section id="features" class="features">
         <div class="container">
           <h3 class="features__title title">Features</h3>
           <h4 class="features__subtitle subtitle">
@@ -249,7 +253,7 @@
                   <g clip-path="url(#clip0_1_196)">
                     <path
                       d="M7.43316 5.34005C7.43316 3.63645 7.83911 2.03985 8.53031 0.599617C8.75522 0.127769 8.56322 -0.121872 8.07225 0.0591861C3.36549 1.81216 0 6.3002 0 11.614C0 18.453 5.54333 24 12.384 24C17.697 24 22.187 20.634 23.9397 15.9319C24.1235 15.4409 23.8711 15.2489 23.3994 15.4738C21.9566 16.1624 20.3603 16.5684 18.657 16.5684C12.4553 16.5656 7.43316 11.5399 7.43316 5.34005Z"
-                      fill="#FFFFFF"
+                      fill="#222222"
                     />
                   </g>
                   <defs>
@@ -264,7 +268,7 @@
           </div>
         </div>
       </section>
-      <section class="pricing">
+      <section id="pricing" class="pricing">
         <div class="container">
           <h3 class="pricing__title title">Pricing</h3>
           <h4 class="pricing__subtitle subtitle">A plan for every need.</h4>
@@ -277,19 +281,19 @@
               <h6 class="pricing__title">Standard</h6>
               <div class="pricing__cost">$9</div>
               <div class="pricing__period">Monthly</div>
-              <button class="pricing__button">Buy now</button>
+              <button class="pricing__button buy-now">Buy now</button>
             </div>
             <div class="pricing__plan premium">
               <h6 class="pricing__title">Premium</h6>
               <div class="pricing__cost">$99</div>
               <div class="pricing__period">Annually</div>
-              <button class="pricing__button">Buy now</button>
+              <button class="pricing__button buy-now">Buy now</button>
             </div>
             <div class="pricing__plan lifetime">
               <h6 class="pricing__title">Lifetime</h6>
               <div class="pricing__cost">$149</div>
               <div class="pricing__period">up front</div>
-              <button class="pricing__button">Buy now</button>
+              <button class="pricing__button buy-now">Buy now</button>
             </div>
           </div>
         </div>
@@ -357,55 +361,73 @@
           <img src="./assets/icons/close.svg" alt="close" />
         </button>
         <h3 class="modal__title">Leave a request for the purchase of goods</h3>
-        <input type="text" class="modal__input" placeholder="name" />
-        <p class="modal__error-message">this field is required*</p>
-        <input type="text" class="modal__input" placeholder="email" />
-        <p class="modal__error-message">this field is required*</p>
-        <div class="modal__text-plan">Your plan?</div>
-        <div class="modal__buttons">
-          <div class="modal__button">
-            <div class="modal__button-check">
-              <img src="./assets/icons/check.svg" alt="check" />
+        <form class="modal__form">
+          <input
+            required
+            type="text"
+            class="modal__input modal__input_name"
+            placeholder="name"
+          />
+          <p class="modal__error-message"></p>
+          <input
+            required
+            type="email"
+            class="modal__input modal__input_email"
+            placeholder="email"
+          />
+          <p class="modal__error-message"></p>
+          <div class="modal__text-plan">Your plan?</div>
+          <div class="modal__buttons">
+            <div class="modal__button standard">
+              <div class="modal__button-check">
+                <img src="./assets/icons/check.svg" alt="check" />
+              </div>
+              Standart
             </div>
-            Standart
-          </div>
-          <div class="modal__button">
-            <div class="modal__button-check">
-              <img src="./assets/icons/check.svg" alt="check" />
+            <div class="modal__button premium">
+              <div class="modal__button-check">
+                <img src="./assets/icons/check.svg" alt="check" />
+              </div>
+              Premium
             </div>
-            Premium
-          </div>
-          <div class="modal__button">
-            <div class="modal__button-check">
-              <img src="./assets/icons/check.svg" alt="check" />
+            <div class="modal__button lifetime">
+              <div class="modal__button-check">
+                <img src="./assets/icons/check.svg" alt="check" />
+              </div>
+              Lifetime
             </div>
-            Lifetime
           </div>
+          <div class="modal__text-info">How did you know about our app?</div>
+          <div class="modal__chekboxes">
+            <label class="modal__checkbox"
+              >Facebook
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="modal__checkbox"
+              >Instagram
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="modal__checkbox"
+              >Youtube
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="modal__checkbox"
+              >Other
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <button type="submit" class="modal__submit button">Send</button>
+        </form>
+        <div class="modal__loading">
+          <div class="modal__loading-icon">
+            <img src="/src/assets/icons/loading-icon.svg" alt="loading" />
+          </div>
+          <span>Loading...</span>
         </div>
-        <div class="modal__text-info">How did you know about our app?</div>
-        <div class="modal__chekboxes">
-          <label class="modal__checkbox"
-            >Facebook
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-          <label class="modal__checkbox"
-            >Instagram
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-          <label class="modal__checkbox"
-            >Youtube
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-          <label class="modal__checkbox"
-            >Other
-            <input type="checkbox" />
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <button class="modal__submit button">Send</button>
       </div>
     </div>
   </body>

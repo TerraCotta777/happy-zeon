@@ -56,6 +56,18 @@ body {
   color: $primary-color;
 }
 
+body:has(.main) {
+  background-color: aquamarine;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+  margin-top: 77px;
+}
+
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -126,6 +138,9 @@ body {
   :root {
     --size: 2;
   }
+  .main {
+    margin-top: 90px;
+  }
   .container {
     max-width: 720px;
   }
@@ -149,6 +164,9 @@ body {
 @media (min-width: 992px) {
   :root {
     --size: 1;
+  }
+  .main {
+    margin-top: 90px;
   }
   .container {
     max-width: 960px;
